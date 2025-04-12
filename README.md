@@ -28,36 +28,6 @@ A full-featured URL shortener built using the **MERN (MongoDB, Express, React, N
 - Vanilla CSS (no Tailwind)
 - Responsive Design
 
----
-
-## 📁 Project Structure
-
-### Backend (`/backend`)
-```
-/backend
-├── controllers
-├── models
-├── routes
-├── middleware
-├── utils
-├── .env
-├── server.js
-```
-
-### Frontend (`/frontend`)
-```
-/frontend
-├── public
-├── src
-│   ├── components
-│   ├── pages
-│   ├── styles
-│   ├── App.jsx
-│   ├── main.jsx
-```
-
----
-
 ## ⚙️ Installation
 
 ### 1. Clone the Repository
