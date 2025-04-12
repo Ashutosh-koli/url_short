@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("trust proxy", true);
 app.use(cors({
-    origin: 'https://url-short-three-bice.vercel.app/login',
+    origin: 'https://url-short-three-bice.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
