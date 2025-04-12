@@ -69,8 +69,6 @@ npm run dev
 2. Create a short URL by pasting a long one
 3. View analytics on clicks
 4. Manage, edit, or delete links
-5. Customize your profile and mobile preview
-
 ---
 
 ## 📸 Screenshots
