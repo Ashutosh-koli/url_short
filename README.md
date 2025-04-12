@@ -7,8 +7,6 @@ A full-featured URL shortener built using the **MERN (MongoDB, Express, React, N
 - 🔐 User Authentication (Register/Login)
 - 📉 Click Tracking & Analytics
 - 🌐 Custom Short URLs
-- 🧾 Profile Dashboard with editable title, bio, and avatar
-- 🎨 Banner customization and live mobile preview
 - 📄 Pagination for links
 - 📱 Fully responsive frontend
 
