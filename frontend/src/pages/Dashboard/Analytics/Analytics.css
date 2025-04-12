@@ -1,0 +1,351 @@
+.analyticsPage-tableContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #F1F1F1;
+    padding-block: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(59, 60, 81, 1);
+}
+
+.analytics-table-wrapper{
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.analytics-InnerTableContainer{
+    height: 100%;
+    margin: 0 2% 0 2%;    
+    background-color: rgba(243, 247, 253, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+    overflow-y: auto;
+    max-height: 100%;
+    padding-inline: 1%;
+}
+
+.analyticsPage-table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 2%;
+    table-layout: fixed;
+    text-align: center;
+    position: relative;
+}
+
+.analytics-table-wrapper::-webkit-scrollbar {
+    width: 2px;
+}
+
+.analytics-table-wrapper::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 4px;
+}
+
+.analytics-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+.analyticsPage-table-headings{
+    font-family: 'Manrope';
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(59, 60, 81, 1);
+}
+
+.analyticsPage-table-headings th {
+    padding-block: 20px 10px;
+}
+
+.analyticsPage-table-body{
+    font-family: 'Manrope';
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: rgba(59, 60, 81, 1);
+}
+
+.analyticsPage-table-body td{
+    padding-block: 8.75px;
+}
+
+.analyticsTable-date-column{
+    width: 100%;
+}
+
+.analyticsTable-url-column{
+    padding-inline: 0.5%;
+}
+
+.analyticsTable-ip-column {
+    width: 20%;
+}
+
+.analyticsTable-browser-column{
+    width: 15%;
+}
+
+.analyticsTable-border{
+    line-height: 1.5;
+}
+
+.analytics-pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.analytics-page-page-btn {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .analytics-page-page-btn.analytics-page-active {
+    background-color: #0056b3;
+  }
+
+  .analyticsTable-date-column-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+  }
+
+  .timestampSortButtons{
+    width: 8px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+.analyticsTable-timeSortButtons-container img{
+    width: 8px;
+    aspect-ratio: 1/1;
+    opacity: 0.5;
+}
+
+.timestampSortButtons img:hover{
+    opacity: 1;
+}
+
+.timestampSortActive img{
+    opacity: 0.75 !important;
+}
+
+.analyticsTable-short-url-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analyticsTable-short-url-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analyticsTable-url-column span{
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+}
+
+.analyticsTable-short-url-column-aTag{
+    color: rgba(59, 60, 81, 1);
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.analyticsTable-short-url-column-aTag:hover{
+    color: #1717EE !important;
+    text-decoration: underline;
+}
+
+.analyticsTable-short-url-column-aTag:visited{
+    color:rgba(102, 76, 108, 1);
+    text-decoration: none;
+}
+
+.pagination{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.page-btn, .prev-btn, .next-btn {
+    padding: 4px 8px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .prev-btn, .next-btn {
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .page-btn.active {
+    background-color: #0056b3;
+  }
+
+
+.prev-btn.disabled, .next-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: rgba(145, 158, 171, 1);
+  }
+  
+  .prev-btn:hover, .next-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .page-btn:hover {
+    background-color: #0056b3;
+  }
+
+@media (max-width: 780px) {
+    
+    .analytics-table-wrapper{
+        overflow-y: auto;
+        max-height: 100%;
+        overflow-x: auto;
+        max-width: 100%;
+    }
+
+    .analyticsPage-table {
+        width: 250vw;
+        min-width: 100%;
+        table-layout: auto;
+    }
+    
+    .analytics-InnerTableContainer{
+        height: 100%;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .analyticsTable-date-column{
+        width: 50vw;
+    }
+    
+    .analyticsTable-original-url-column{
+        width: 50vw;
+    }
+
+    .analyticsTable-short-url-column{
+        width: 50vw;
+    }
+
+    .analyticsTable-ip-column {
+        width: 50vw;
+    }
+
+    .analyticsTable-browser-column{
+        width: 50vw;
+    }
+    .pagination{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        }     
+    
+}
+
+@media (min-width: 781px) and (max-width: 1024px) {
+    
+    .analytics-table-wrapper{
+        overflow-y: auto;
+        max-height: 100%;
+        overflow-x: auto;
+        max-width: 100%;
+    }
+
+    .analyticsPage-table {
+        width: 200vw;
+        min-width: 100%;
+        table-layout: auto;
+    }
+    
+    .analytics-InnerTableContainer{
+        height: 100%;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .analyticsTable-date-column{
+        width: 40vw;
+    }
+    
+    .analyticsTable-original-url-column{
+        padding-inline: 2%;
+        width: 50vw;
+    }
+
+    .analyticsTable-short-url-column{
+        width: 50vw;
+    }
+
+    .analyticsTable-ip-column {
+        width: 30vw;
+    }
+
+    .analyticsTable-browser-column{
+        width: 30vw;
+    }
+    .pagination{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        }     
+    
+}
+
+@media (min-width: 1920px) {
+
+    .analyticsPage-table-body td{
+        padding-block: 15px;
+    }
+
+    .analyticsPage-table-headings{
+        font-family: 'Manrope';
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .analyticsPagetable-headings {
+        padding-block: 30px 20px;
+    }
+    
+    .analyticsPage-table-body{
+        font-family: 'Manrope';
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+  }

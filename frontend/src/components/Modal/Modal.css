@@ -1,0 +1,586 @@
+.modalContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0);
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.deleteModalContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-out forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-error {
+    border: 1px solid red !important;
+  }
+  
+
+@keyframes fadeIn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.modalContainer.slideOut {
+    animation: fadeOut 0.6s ease-out forwards;
+}
+
+.modalBox.slideOut {
+    animation: slideOut 0.3s ease-out forwards;
+}
+
+.deleteModal-modal-box.slideOut{
+    animation: fadeOut 0.6s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.modalBox {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 42.25%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    animation: slideIn 0.3s ease-out forwards;
+    border-radius: 10px 0 0 10px;
+}
+
+.modalForm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalHeader {
+    width: 100%;
+    height: 8.5%;
+    background-color: rgba(59, 60, 81, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 5%;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.modalHeader img {
+    width: 16px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+.modalBody {
+    flex: 1;
+    padding-top: 4%;
+    padding-inline: 4%;
+    font-family: 'Manrope';
+    font-size: 1rem;
+}
+
+.modalBody span {
+    color: rgba(255, 1, 1, 1);
+}
+
+.destinationUrl {
+    height: 20%;
+}
+
+.modalInputs-heading {
+    font-weight: 600;
+}
+
+.urlInputBox {
+    border: 1px solid rgba(209, 213, 219, 1);
+    margin-top: 1.8%;
+    height: 45%;
+    border-radius: 6px;
+    margin-bottom: 0.5%;
+    font-weight: 600;
+}
+
+.urlInputBox input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding-left: 2%;
+    font-size: 0.9rem;
+}
+
+.urlInputBox input:focus {
+    border: none;
+    outline: none;
+}
+
+.modalerror {
+    font-size: 0.75rem;
+    color: rgba(255, 1, 1, 1);
+    font-weight: 400;
+    padding-left: 2%;
+}
+
+.urlRemarks {
+    height: 40.5%;
+}
+
+.modalUrlRemarks {
+    border: 1px solid rgba(209, 213, 219, 1);
+    border-radius: 6px;
+    margin-top: 2%;
+    width: 100%;
+    height: 72%;
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding: 1% 0 0 1.5%;
+}
+
+.urlRemarks textarea:focus {
+    border: 1px solid rgba(209, 213, 219, 1);
+    outline: none;
+}
+
+.linkExpirationTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 8%;
+    height: 6%;
+    cursor: pointer;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    aspect-ratio: 1/1;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.modalFooter {
+    height: 10%;
+    background-color: rgba(59, 60, 81, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5%;
+}
+
+.linkExpiration {
+    margin-top: 1%;
+    height: 20%;
+}
+
+.expirationDateInputBoxContainer {
+    height: 40%;
+    margin-top: 2%;
+    border: 1px solid rgba(209, 213, 219, 1);
+    border-radius: 6px;
+}
+
+.formattedInputBox-expirationDate-Container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0.5%;
+}
+
+.createEditModal-formattedExpirationDate {
+    width: 100%;
+    height: 100%;
+    font-family: 'Manrope';
+    font-size: 0.9rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background-color: none;
+    padding-left: 2%;
+}
+
+.createEditModal-formattedExpirationDate:focus {
+    border: none;
+    outline: none;
+    background-color: none;
+}
+
+
+
+.createEditModal-expirationDate-input {
+    width: 100%;
+    height: 100%;
+    font-family: 'Manrope';
+    font-size: 0.9rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background-color: none;
+    padding-left: 2%;
+}
+
+.createEditModal-expirationDate-input:focus {
+    border: none;
+    outline: none;
+    background-color: none;
+}
+
+
+
+.readOnly-originalURL-input-modal {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    cursor: not-allowed;
+    font-weight: 400;
+}
+
+.deleteModal-modal-box {
+    width: 38.75%;
+    height: 35%;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1); 
+    transform: translateZ(0); 
+    perspective: 1000px; 
+    transition: transform 0.3s ease out;
+}
+
+.deleModal-are-you-sure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+    font-family: 'Manrope';
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: -16px;
+}
+
+.deleteModal-buttons-container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.deleteModal-buttons-container .buttons {
+    height: 75%;
+    flex: 0.40;
+}
+
+.deleteModal-buttons-container .buttons button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deleteModal-buttons-container .buttons button:hover {
+    transform: scale(1.025); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.cancelButton-deleteModal {
+    background-color: rgba(236, 236, 238, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+.deleteButton-deleteModal {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(27, 72, 218, 1);
+}
+
+.modalFooterButton {
+    height: 60%;
+    width: 20%;
+}
+
+.modalFooterButton button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: 'Manrope';
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.modalCreateEdit-CancelButton {
+    background-color: transparent;
+}
+
+.modalCreateNewButton {
+    background-color: rgba(27, 72, 218, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.calendarIconButton{
+    width: 13px;
+    aspect-ratio: 1/1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.calendarIconButton img{
+    width: 100%;
+    height: 100%;
+}
+
+.expiration-date-disabled{
+    background-color: #ccc !important; 
+}
+
+.deletemodal-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    bottom: 15%;
+    left: 45%;
+    cursor: pointer;
+}
+
+.deletemodal-close img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 780px){
+    .modalBox {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        animation: slideIn 0.3s ease-out forwards;
+        border-radius: 0 0 0 0;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 10%;
+        height: 6%;
+        cursor: pointer;
+    }
+
+    .deleteModal-modal-box {
+        width: 88%;
+        height: 30%;
+        gap: 5%;
+    }
+
+    .deleModal-are-you-sure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35%;
+        font-family: 'Manrope';
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    
+    .deleteModal-buttons-container {
+        width: 100%;
+        height: 27.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+    }
+
+    .deletemodal-close{
+        bottom: 10.75%;
+        left: 45%;
+    }
+
+    .modalFooterButton {
+        height: 60%;
+        width: 30%;
+    }
+}
+
+@media (min-width: 780px) and (max-width: 1024px){
+    .modalBox {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        animation: slideIn 0.3s ease-out forwards;
+        border-radius: 0 0 0 0;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 8%;
+        height: 6%;
+        cursor: pointer;
+    }
+
+    .deleteModal-modal-box {
+        width: 85%;
+        height: 30%;
+        gap: 5%;
+    }
+
+    .deleModal-are-you-sure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35%;
+        font-family: 'Manrope';
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    
+    .deleteModal-buttons-container {
+        width: 100%;
+        height: 27.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+    }
+
+    .deletemodal-close{
+        bottom: 10.75%;
+        left: 45%;
+    }
+
+    .modalHeader {
+        height: 8%;
+    }
+
+    .modalFooter {
+        height: 8%;
+    }
+
+    .slider:before {
+        height: 22.25px;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(25px);
+        -ms-transform: translateX(25px);
+        transform: translateX(25px);
+    }
+}

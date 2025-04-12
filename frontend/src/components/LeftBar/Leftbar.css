@@ -1,0 +1,214 @@
+.leftbarSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgba(59, 60, 81, 1);
+    font-family: 'Manrope';
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.leftbarLogo {
+    margin-top: 10%;
+    padding-left: 10%;
+}
+
+.dashboardTabs {
+    margin-top: 17%;
+    margin-bottom: 17%;
+    height: 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dashboardTabName {
+    height: 33.33%;
+    padding-left: 7%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    margin-inline: 5%;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgba(59, 60, 81, 1);
+}
+
+.dashboardTabName svg {
+    width: 15px;
+    aspect-ratio: 1/1;
+    stroke: rgba(59, 60, 81, 1);
+}
+
+.dashboardTabName:hover svg, .dashboardTabName:hover p{
+    stroke: rgba(27, 72, 218, 1);
+    color: rgba(27, 72, 218, 1);
+}
+
+.dashboardSettings {
+    margin-top: 2%;
+    padding-left: 7%;
+    margin-inline: 5%;
+    padding-block: 3.33%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgba(59, 60, 81, 1);
+}
+
+.dashboardSettings-mobileView{
+    display: none;
+}
+
+.dashboardSettings svg {
+    width: 16px;
+    aspect-ratio: 1/1;
+    stroke: rgba(59, 60, 81, 1);
+}
+
+.dashboardSettings:hover svg, .dashboardSettings:hover p{
+    stroke: rgba(27, 72, 218, 1);
+    color: rgba(27, 72, 218, 1);
+}
+
+.selected{
+    color: rgba(27, 72, 218, 1);
+}
+.activeTab svg{
+    stroke: rgba(27, 72, 218, 1);
+}
+
+.activeTab{
+    background-color: rgb(233, 241, 251);
+}
+
+@media (max-width: 780px) {
+    .leftbarSection{
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        font-size: 0.8rem;
+    }
+
+    .leftbarLogo{
+        display: none;
+    }
+
+    .dashboardSettings {
+        display: none;
+    }
+
+    .dashboardTabs {
+        margin-top: 0%;
+        margin-bottom: 0%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0%;
+        padding-inline: 1.5%;
+    }
+
+    .dashboardTabName svg {
+        width: 12px;
+        aspect-ratio: 1/1;
+        stroke: rgba(59, 60, 81, 1);
+    }
+
+    .dashboardTabName {
+        flex: 1;
+        height: 100%;
+        padding-left: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5%;
+        margin-inline: 0%;
+        border-radius: 15px;
+        cursor: pointer;
+        text-decoration: none;
+        color: rgba(59, 60, 81, 1);
+    }
+    .activeTab{
+        background-color: rgb(233, 241, 251);
+    }
+}
+
+@media  (min-width: 780px) and (max-width: 1024px) {
+    .leftbarSection{
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        font-size: 0.8rem;
+    }
+
+    .leftbarLogo{
+        display: none;
+    }
+
+    .dashboardSettings {
+        display: none;
+    }
+
+    .dashboardTabs {
+        margin-top: 0%;
+        margin-bottom: 0%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0%;
+        padding-inline: 1.5%;
+    }
+
+    .dashboardTabName {
+        flex: 1;
+        height: 100%;
+        padding-left: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4%;
+        margin-inline: 0%;
+    }
+    .activeTab{
+        background-color: rgb(233, 241, 251);
+    }
+
+    .dashboardTabName svg {
+        width: 20px;
+    }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1439px) {
+
+    .dashboardTabName svg{
+        width: 12px !important;
+    }
+
+}
+
+@media (min-width: 1920px) {
+
+    .dashboardTabName svg {
+        width: 30px;
+    }    
+
+    .dashboardSettings svg {
+        width: 30px;
+    }
+
+    .leftbarLogo {
+        transform: scale(1.5);
+        padding-left: 25%;
+    }
+  
+  }
