@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const device = require("express-device");
 const crypto = require("crypto");
 const validator = require("validator");
-const BASE_URL= 'https://url-short-i4xd.onrender.com';
+const BASE_URL= 'http://url-short-i4xd.onrender.com';
 
 dotenv.config();
 
