@@ -22,6 +22,7 @@ app.use(cors({
 }));
 
 
+
 app.use(userAgent.express());
 app.use(deviceType);
 app.use('/', redirectRoute);
